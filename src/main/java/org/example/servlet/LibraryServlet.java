@@ -32,6 +32,6 @@ public abstract class LibraryServlet {
     }
 
     protected void sendResponseMessage(String method) {
-        response = "Method" + method + "completed successfully";
+        response = "Method " + method + " completed successfully";
     }
 }
