@@ -21,12 +21,12 @@ public class AuthorService {
     }
 
     public void add(String name) {
-        String add = "INSERT INTO authors (name) VALUES (?)";
-        connector.executeAuthor(add, name);
+        String add = "INSERT INTO authors (name) VALUES ('" + name + "')";
+        connector.execute(add);
     }
 
     public Author get(String name) {
-        return connector.getAuthor(name);
+        return connector.get(name);
     }
 
     public void delete(String name) {

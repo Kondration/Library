@@ -42,7 +42,7 @@ public class AuthorRepository {
     }
 
     private void createTable() {
-        String createAuthors = "CREATE TABLE authors (id SERIAL PRIMARY KEY, name CHAR(255))";
+        String createAuthors = "CREATE TABLE authors (id SERIAL PRIMARY KEY, name VARCHAR(255))";
         connector.execute(createAuthors);
     }
 }

@@ -33,7 +33,7 @@ public class BookRepository {
         booksService.addBook("The Green Mile", "Stephen King");
         booksService.addBook("We", "Yevgeny Zamyatin");
         booksService.addBook("Dracula", "Bram Stocker");
-        booksService.addBook("Harry Potter and the Philosopher's Stone", "Joanne Rowling");
+        booksService.addBook("Harry Potter and the Philosophers Stone", "Joanne Rowling");
         booksService.addBook("Harry Potter and the Chamber of Secrets", "Joanne Rowling");
         booksService.addBook("Harry Potter and the Prisoner of Azkaban", "Joanne Rowling");
         booksService.addBook("The Alchemist", "Howard Phillips Lovecraft");

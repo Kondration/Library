@@ -43,28 +43,7 @@ public class Connector {
         }
     }
 
-    public void executeAuthor(String sql, String name) {
-        try {
-            PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setString(1, name);
-            statement.execute();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void executeBook(String sql, String name, int authorId) {
-        try {
-            PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setString(1, name);
-            statement.setInt(2, authorId);
-            statement.execute();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public Author getAuthor(String name) {
+    public Author get(String name) {
         try {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM authors WHERE name = '" + name + "'");
             ResultSet resultSet = statement.executeQuery();
@@ -126,6 +105,7 @@ public class Connector {
         return books;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     protected void finalize() throws Throwable {
         super.finalize();

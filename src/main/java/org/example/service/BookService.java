@@ -23,10 +23,10 @@ public class BookService {
     }
 
     public void addBook(String name, String authorName) {
-        Author author = connector.getAuthor(authorName);
+        Author author = connector.get(authorName);
         int authorId = author.getId();
-        String add = "INSERT INTO books (name, author_id) VALUES (?, ?)";
-        connector.executeBook(add, name, authorId);
+        String add = "INSERT INTO books (name, author_id) VALUES ('" + name + "'," + authorId + ")";
+        connector.execute(add);
     }
 
     public ArrayList<Book> getBooks() {
